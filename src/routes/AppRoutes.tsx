@@ -37,10 +37,7 @@ const AppRoute = (): JSX.Element => {
             </PublicRouteRender>
           }
         >
-          <Route
-            path="/"
-            element={<Route path="/" element={<Home lang={lang} />} />}
-          />
+          <Route path="/" element={<Home lang={lang} />} />
         </Route>
         {/* Private Routes not used beacause this is portfolio website */}
         <Route
