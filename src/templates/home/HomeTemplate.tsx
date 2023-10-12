@@ -1,10 +1,9 @@
-import { IHomeTemplate } from "../../interfaces";
+import { ICommonComponent } from "../../interfaces";
 import { Container, Row, Col } from "react-bootstrap";
 import { homeLogo } from "../../assets";
-import { AboutMe, Particle } from "../../components";
-// import Type from "./Type";
+import { AboutMe, Particle, TypeWriter } from "../../components";
 
-const HomeTemplate = ({ ...props }: IHomeTemplate): JSX.Element => {
+const HomeTemplate = ({ lang }: ICommonComponent): JSX.Element => {
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -25,7 +24,7 @@ const HomeTemplate = ({ ...props }: IHomeTemplate): JSX.Element => {
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
-                {/* <Type /> */}
+                <TypeWriter />
               </div>
             </Col>
 

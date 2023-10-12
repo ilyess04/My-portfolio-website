@@ -1,2 +1,3 @@
 import Particle from "./partcile/Particle";
-export { Particle };
+import TypeWriter from "./typeWriter/TypeWriter";
+export { Particle, TypeWriter };

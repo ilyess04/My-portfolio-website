@@ -56,4 +56,21 @@ const INIT_PARTICLE_PARAMS = {
   },
   retina_detect: true,
 };
-export { INIT_AUTH_STATE, INIT_AUTH_REDUCER_STATE, INIT_PARTICLE_PARAMS };
+const INIT_TYPE_WRITER_OPTIONS = {
+  strings: [
+    "Software Developer",
+    "Freelancer",
+    "MERN Stack Developer",
+    "Open Source Contributor",
+  ],
+  autoStart: true,
+  loop: true,
+  deleteSpeed: 50,
+};
+
+export {
+  INIT_AUTH_STATE,
+  INIT_AUTH_REDUCER_STATE,
+  INIT_PARTICLE_PARAMS,
+  INIT_TYPE_WRITER_OPTIONS,
+};
