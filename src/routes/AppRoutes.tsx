@@ -1,12 +1,15 @@
-import { BrowserRouter, Routes, Navigate, Route } from "react-router-dom";
-import { Login, Home } from "../pages";
-import { useSelector } from "react-redux";
-import { IRootState } from "../interfaces";
 import PublicRoute from "./publicRoute/PublicRoute";
 import PrivateRoute from "./privateRoute/PrivateRoute";
+import { BrowserRouter, Routes, Navigate, Route } from "react-router-dom";
+import { Home } from "../pages";
+import { useSelector } from "react-redux";
+import { IRootState } from "../interfaces";
+import { useContext } from "react";
+import { LangContext } from "../lang/provider/Provider";
 
 const AppRoute = (): JSX.Element => {
   const auth = useSelector((state: IRootState) => state?.auth);
+  const lang = useContext(LangContext);
 
   function PrivateRouteRender(props: any) {
     return auth?.accessToken === undefined &&
@@ -25,30 +28,32 @@ const AppRoute = (): JSX.Element => {
     );
   }
   return (
-      <BrowserRouter>
-        <Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          element={
+            <PublicRouteRender>
+              <PublicRoute />
+            </PublicRouteRender>
+          }
+        >
           <Route
-            element={
-              <PublicRouteRender>
-                <PublicRoute />
-              </PublicRouteRender>
-            }
-          >
-            <Route path="/login" element={<Login />} />
-          </Route>
-          <Route
-            element={
-              <PrivateRouteRender>
-                <PrivateRoute />
-              </PrivateRouteRender>
-            }
-          >
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/dashboard" element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+            path="/"
+            element={<Route path="/" element={<Home lang={lang} />} />}
+          />
+        </Route>
+        {/* Private Routes not used beacause this is portfolio website */}
+        <Route
+          element={
+            <PrivateRouteRender>
+              <PrivateRoute />
+            </PrivateRouteRender>
+          }
+        >
+          <Route path="/" element={<>Private routes</>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
