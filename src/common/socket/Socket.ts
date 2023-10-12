@@ -1,5 +1,5 @@
 import io from "socket.io-client";
-import { Config } from "../common";
+import { Config } from "..";
 
 const Singleton = (function () {
   let instance: any;
