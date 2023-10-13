@@ -1,2 +1,3 @@
 import HomeTemplate from "./home/HomeTemplate";
-export { HomeTemplate };
+import AboutTemplate from "./about/AboutTemplate";
+export { HomeTemplate, AboutTemplate };

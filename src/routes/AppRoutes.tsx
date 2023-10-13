@@ -1,7 +1,7 @@
 import PublicRoute from "./publicRoute/PublicRoute";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import { BrowserRouter, Routes, Navigate, Route } from "react-router-dom";
-import { Home } from "../pages";
+import { About, Home } from "../pages";
 import { useSelector } from "react-redux";
 import { IRootState } from "../interfaces";
 import { useContext } from "react";
@@ -38,6 +38,7 @@ const AppRoute = (): JSX.Element => {
           }
         >
           <Route path="/" element={<Home lang={lang} />} />
+          <Route path="/about" element={<About lang={lang} />} />
         </Route>
         {/* Private Routes not used beacause this is portfolio website */}
         <Route
