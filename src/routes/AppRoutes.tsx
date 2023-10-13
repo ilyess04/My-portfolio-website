@@ -1,54 +1,19 @@
 import PublicRoute from "./publicRoute/PublicRoute";
-import PrivateRoute from "./privateRoute/PrivateRoute";
 import { BrowserRouter, Routes, Navigate, Route } from "react-router-dom";
-import { About, Home } from "../pages";
-import { useSelector } from "react-redux";
+import { About, Home, Resume } from "../pages";
 import { useContext } from "react";
 import { LangContext } from "../lang/provider/Provider";
-import { IRootState } from "../common/interfaces";
 
 const AppRoute = (): JSX.Element => {
-  const auth = useSelector((state: IRootState) => state?.auth);
   const lang = useContext(LangContext);
-
-  function PrivateRouteRender(props: any) {
-    return auth?.accessToken === undefined &&
-      auth?.refreshToken === undefined &&
-      auth?.user === undefined ? (
-      <Navigate to="/login" />
-    ) : (
-      props.children
-    );
-  }
-  function PublicRouteRender(props: any) {
-    return !auth?.accessToken && !auth?.refreshToken && !auth?.user ? (
-      props.children
-    ) : (
-      <Navigate to="/" />
-    );
-  }
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          element={
-            <PublicRouteRender>
-              <PublicRoute />
-            </PublicRouteRender>
-          }
-        >
+        <Route element={<PublicRoute />}>
           <Route path="/" element={<Home lang={lang} />} />
           <Route path="/about" element={<About lang={lang} />} />
-        </Route>
-        {/* Private Routes not used beacause this is portfolio website */}
-        <Route
-          element={
-            <PrivateRouteRender>
-              <PrivateRoute />
-            </PrivateRouteRender>
-          }
-        >
-          <Route path="/" element={<>Private routes</>} />
+          <Route path="/resume" element={<Resume lang={lang} />} />
+          <Route path="/*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </BrowserRouter>

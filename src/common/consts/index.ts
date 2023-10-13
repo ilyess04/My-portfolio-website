@@ -1,17 +1,3 @@
-import { IAuthReducer, IAuthState } from "../../common/interfaces";
-
-/* STATE */
-const INIT_AUTH_REDUCER_STATE: IAuthReducer = {
-  accessToken: undefined,
-  refreshToken: undefined,
-  user: undefined,
-};
-const INIT_AUTH_STATE: IAuthState = {
-  email: "",
-  password: "",
-};
-
-/* COMPONENTS */
 const INIT_PARTICLE_PARAMS = {
   particles: {
     number: {
@@ -66,10 +52,6 @@ const INIT_TYPE_WRITER_OPTIONS = {
   loop: true,
   deleteSpeed: 50,
 };
+const CV_URL = "https://ilyessellami.com/wp-content/assets/cv.pdf";
 
-export {
-  INIT_AUTH_STATE,
-  INIT_AUTH_REDUCER_STATE,
-  INIT_PARTICLE_PARAMS,
-  INIT_TYPE_WRITER_OPTIONS,
-};
+export { INIT_PARTICLE_PARAMS, INIT_TYPE_WRITER_OPTIONS, CV_URL };
