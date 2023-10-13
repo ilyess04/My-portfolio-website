@@ -1,3 +1,4 @@
 import HomeTemplate from "./home/HomeTemplate";
 import AboutTemplate from "./about/AboutTemplate";
-export { HomeTemplate, AboutTemplate };
+import ProjectsTemplate from "./projects/ProjectsTemplate";
+export { HomeTemplate, AboutTemplate, ProjectsTemplate };

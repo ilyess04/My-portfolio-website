@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IAuthReducer } from "../../../interfaces";
+import { IAuthReducer } from "../../../common/interfaces";
 import { INIT_AUTH_REDUCER_STATE } from "../../../common/consts";
 
 const AuthReducer = createSlice({

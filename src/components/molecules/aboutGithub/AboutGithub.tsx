@@ -11,7 +11,6 @@ const AboutGithub = (): JSX.Element => {
         username="ilyess04"
         blockSize={15}
         blockMargin={5}
-        color="#c084f5"
         fontSize={16}
       />
     </Row>

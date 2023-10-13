@@ -1,7 +1,7 @@
 import { LangContext } from "../../lang/provider/Provider";
 import { useSelector } from "react-redux";
-import { IRootState, IPageProps } from "../../interfaces";
-import { Elang } from "../../enums";
+import { IRootState, IPageProps } from "../../common/interfaces";
+import { Elang } from "../../common/enums";
 import EN from "../../lang/en/en";
 import FR from "../../lang/fr/fr";
 

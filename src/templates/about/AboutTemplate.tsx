@@ -1,8 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { AboutCard, AboutGithub, Particle, Techstack } from "../../components";
-import { ICommonComponent } from "../../interfaces";
 import Toolstack from "../../components/organismes/toolStack/ToolStack";
 import { aboutImg } from "../../assets";
+import { ICommonComponent } from "../../common/interfaces";
 
 const AboutTemplate = ({ lang }: ICommonComponent): JSX.Element => {
   return (

@@ -1,7 +1,7 @@
-import { ICommonComponent } from "../../interfaces";
 import { Container, Row, Col } from "react-bootstrap";
 import { homeLogo } from "../../assets";
 import { AboutMe, Particle, TypeWriter } from "../../components";
+import { ICommonComponent } from "../../common/interfaces";
 
 const HomeTemplate = ({ lang }: ICommonComponent): JSX.Element => {
   return (

@@ -1,4 +1,4 @@
-import { ICommonComponent } from "../../interfaces";
+import { ICommonComponent } from "../../common/interfaces";
 import { HomeTemplate } from "../../templates";
 
 const Home = ({ lang }: ICommonComponent): JSX.Element => {

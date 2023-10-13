@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Elang } from "../../../enums";
-import { ISettingReducer } from "../../../interfaces";
+import { ISettingReducer } from "../../../common/interfaces";
+import { Elang } from "../../../common/enums";
 
 const initiaState: ISettingReducer = {
   lang: Elang.en,

@@ -1,5 +1,4 @@
-import { IAuthReducer } from "../../interfaces";
-import { IAuthState } from "../../interfaces/state";
+import { IAuthReducer, IAuthState } from "../../common/interfaces";
 
 /* STATE */
 const INIT_AUTH_REDUCER_STATE: IAuthReducer = {

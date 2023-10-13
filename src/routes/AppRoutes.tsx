@@ -3,9 +3,9 @@ import PrivateRoute from "./privateRoute/PrivateRoute";
 import { BrowserRouter, Routes, Navigate, Route } from "react-router-dom";
 import { About, Home } from "../pages";
 import { useSelector } from "react-redux";
-import { IRootState } from "../interfaces";
 import { useContext } from "react";
 import { LangContext } from "../lang/provider/Provider";
+import { IRootState } from "../common/interfaces";
 
 const AppRoute = (): JSX.Element => {
   const auth = useSelector((state: IRootState) => state?.auth);
