@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Footer } from "../../layouts";
-import { Navbar } from "react-bootstrap";
+import { Footer, NavBar } from "../../layouts";
 import { useScrollToTop } from "../../common/hooks";
 
 const PublicRoute = (): JSX.Element => {
@@ -18,7 +17,7 @@ const PublicRoute = (): JSX.Element => {
 
   return (
     <div className="App" id={isLoading ? "no-scroll" : "scroll"}>
-      <Navbar />
+      <NavBar />
       <Outlet />
       <Footer />
     </div>

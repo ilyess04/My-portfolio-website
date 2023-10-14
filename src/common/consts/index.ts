@@ -54,4 +54,11 @@ const INIT_TYPE_WRITER_OPTIONS = {
 };
 const CV_URL = "https://ilyessellami.com/wp-content/assets/cv.pdf";
 
-export { INIT_PARTICLE_PARAMS, INIT_TYPE_WRITER_OPTIONS, CV_URL };
+const GIT_PORTFOLIO_URL = "https://github.com/ilyess04/my-portfolio-website";
+
+export {
+  INIT_PARTICLE_PARAMS,
+  INIT_TYPE_WRITER_OPTIONS,
+  CV_URL,
+  GIT_PORTFOLIO_URL,
+};
