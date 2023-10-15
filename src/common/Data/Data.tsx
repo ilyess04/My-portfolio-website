@@ -14,6 +14,7 @@ import {
   TWITTER_URL,
 } from "../consts";
 import { FaLinkedinIn } from "react-icons/fa";
+import { ISocialIcon } from "../interfaces";
 
 class Data {
   static getNavItems() {
@@ -51,7 +52,7 @@ class Data {
       },
     ];
   }
-  static getSocialItems() {
+  static getSocialItems(): Array<ISocialIcon> {
     return [
       { url: GITHUB_URL, child: <AiFillGithub /> },
       { url: TWITTER_URL, child: <AiOutlineTwitter /> },

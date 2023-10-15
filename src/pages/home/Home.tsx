@@ -1,6 +1,8 @@
+import { Data } from "../../common/Data/Data";
 import { HomeTemplate } from "../../templates";
 
 const Home = (): JSX.Element => {
-  return <HomeTemplate />;
+  const icons = Data.getSocialItems();
+  return <HomeTemplate icons={icons} />;
 };
 export default Home;

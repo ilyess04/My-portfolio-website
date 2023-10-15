@@ -1,14 +1,9 @@
 import Tilt from "react-parallax-tilt";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaLinkedinIn } from "react-icons/fa";
 import { myImg } from "../../../assets";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { IHomeTemplates } from "../../../common/interfaces";
 
-const AboutMe = (): JSX.Element => {
+const AboutMe = ({ icons }: IHomeTemplates): JSX.Element => {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -61,46 +56,18 @@ const AboutMe = (): JSX.Element => {
               Feel free to <span className="purple">connect </span>with me
             </p>
             <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
+              {icons.map((icon, index) => (
+                <li key={index} className="social-icons">
+                  <a
+                    href={icon.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour  home-social-icons"
+                  >
+                    {icon.child}
+                  </a>
+                </li>
+              ))}
             </ul>
           </Col>
         </Row>

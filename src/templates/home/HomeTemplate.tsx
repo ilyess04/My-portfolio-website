@@ -1,8 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { homeLogo } from "../../assets";
 import { AboutMe, Particle, TypeWriter } from "../../components";
+import { IHomeTemplates } from "../../common/interfaces";
 
-const HomeTemplate = (): JSX.Element => {
+const HomeTemplate = ({ icons }: IHomeTemplates): JSX.Element => {
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -38,7 +39,7 @@ const HomeTemplate = (): JSX.Element => {
           </Row>
         </Container>
       </Container>
-      <AboutMe />
+      <AboutMe icons={icons} />
     </section>
   );
 };

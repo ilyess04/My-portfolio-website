@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 interface IKeys {
   [key: string]: string;
@@ -6,5 +6,11 @@ interface IKeys {
 interface IPageProps {
   children: JSX.Element | null | undefined | ReactNode;
 }
-
-export type { IKeys, IPageProps };
+interface ISocialIcon {
+  url: string;
+  child: React.ReactNode;
+}
+interface IHomeTemplates {
+  icons: Array<ISocialIcon>;
+}
+export type { IKeys, IPageProps, ISocialIcon, IHomeTemplates };
