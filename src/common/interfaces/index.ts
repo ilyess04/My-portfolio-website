@@ -6,7 +6,5 @@ interface IKeys {
 interface IPageProps {
   children: JSX.Element | null | undefined | ReactNode;
 }
-interface ICommonComponent {
-  lang: IKeys;
-}
-export type { IKeys, IPageProps, ICommonComponent };
+
+export type { IKeys, IPageProps };

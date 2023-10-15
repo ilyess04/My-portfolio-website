@@ -1,8 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Particle, ProjectCard } from "../../components";
-import { ICommonComponent } from "../../common/interfaces";
 
-const ProjectsTemplate = ({ lang }: ICommonComponent): JSX.Element => {
+const ProjectsTemplate = (): JSX.Element => {
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -16,8 +15,6 @@ const ProjectsTemplate = ({ lang }: ICommonComponent): JSX.Element => {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              //   imgPath={chatify}
-              isBlog={false}
               title="Chatify"
               description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
               ghLink="https://github.com/soumyajit4419/Chatify"

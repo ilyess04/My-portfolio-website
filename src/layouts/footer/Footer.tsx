@@ -5,9 +5,11 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Data } from "../../common/Data/Data";
 
 const Footer = (): JSX.Element => {
   let year = new Date().getFullYear();
+  const icons = Data.getSocialItems();
   return (
     <Container fluid className="footer">
       <Row>
@@ -19,46 +21,18 @@ const Footer = (): JSX.Element => {
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://twitter.com/Soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/soumyajit4419/"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram />
-              </a>
-            </li>
+            {icons.map((icon, index) => (
+              <li key={index} className="social-icons">
+                <a
+                  href={icon.url}
+                  style={{ color: "white" }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {icon.child}
+                </a>
+              </li>
+            ))}
           </ul>
         </Col>
       </Row>

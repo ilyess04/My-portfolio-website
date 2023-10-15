@@ -1,9 +1,19 @@
 import {
+  AiFillGithub,
+  AiFillInstagram,
   AiOutlineFundProjectionScreen,
   AiOutlineHome,
+  AiOutlineTwitter,
   AiOutlineUser,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
+import {
+  GITHUB_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  TWITTER_URL,
+} from "../consts";
+import { FaLinkedinIn } from "react-icons/fa";
 
 class Data {
   static getNavItems() {
@@ -39,6 +49,14 @@ class Data {
         ),
         text: "Resume",
       },
+    ];
+  }
+  static getSocialItems() {
+    return [
+      { url: GITHUB_URL, child: <AiFillGithub /> },
+      { url: TWITTER_URL, child: <AiOutlineTwitter /> },
+      { url: LINKEDIN_URL, child: <FaLinkedinIn /> },
+      { url: INSTAGRAM_URL, child: <AiFillInstagram /> },
     ];
   }
 }

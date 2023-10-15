@@ -2,9 +2,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { AboutCard, AboutGithub, Particle, Techstack } from "../../components";
 import Toolstack from "../../components/organismes/toolStack/ToolStack";
 import { aboutImg } from "../../assets";
-import { ICommonComponent } from "../../common/interfaces";
 
-const AboutTemplate = ({ lang }: ICommonComponent): JSX.Element => {
+const AboutTemplate = (): JSX.Element => {
   return (
     <Container fluid className="about-section">
       <Particle />

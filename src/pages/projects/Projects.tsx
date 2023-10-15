@@ -1,7 +1,6 @@
-import { ICommonComponent } from "../../common/interfaces";
 import { ProjectsTemplate } from "../../templates";
 
-const Projects = ({ lang }: ICommonComponent): JSX.Element => {
-  return <ProjectsTemplate lang={lang} />;
+const Projects = (): JSX.Element => {
+  return <ProjectsTemplate />;
 };
 export default Projects;

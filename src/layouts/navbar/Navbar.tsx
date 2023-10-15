@@ -5,18 +5,18 @@ import { logo } from "../../assets";
 import { Data } from "../../common/Data/Data";
 
 function NavBar() {
-  const [expand, updateExpanded] = useState(false);
+  const [expand, setExpand] = useState(false);
   const navItems = Data.getNavItems();
 
   return (
     <Navbar expanded={expand} fixed="top" expand="md" className="navbar">
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
+        <Navbar.Brand as={Link} to="/" className="d-flex">
           <img src={logo} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
-          onClick={() => updateExpanded(!expand)}
+          onClick={() => setExpand(!expand)}
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
@@ -25,7 +25,7 @@ function NavBar() {
                 <Nav.Link
                   as={Link}
                   to={item.to}
-                  onClick={() => updateExpanded(false)}
+                  onClick={() => setExpand(false)}
                 >
                   <div className="d-flex justify-content-center">
                     {item.icon}

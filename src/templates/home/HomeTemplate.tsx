@@ -1,9 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { homeLogo } from "../../assets";
 import { AboutMe, Particle, TypeWriter } from "../../components";
-import { ICommonComponent } from "../../common/interfaces";
 
-const HomeTemplate = ({ lang }: ICommonComponent): JSX.Element => {
+const HomeTemplate = (): JSX.Element => {
   return (
     <section>
       <Container fluid className="home-section" id="home">
