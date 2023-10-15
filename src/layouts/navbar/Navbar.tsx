@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { logo } from "../../assets";
 import { Data } from "../../common/Data/Data";
+import { GIT_PORTFOLIO_URL } from "../../common/consts";
+import { CgGitFork } from "react-icons/cg";
+import { AiFillStar } from "react-icons/ai";
 
 function NavBar() {
   const [expand, setExpand] = useState(false);
@@ -34,6 +37,16 @@ function NavBar() {
                 </Nav.Link>
               </Nav.Item>
             ))}
+            <Nav.Item className="fork-btn">
+              <Button
+                href={GIT_PORTFOLIO_URL}
+                target="_blank"
+                className="fork-btn-inner"
+              >
+                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
+                <AiFillStar style={{ fontSize: "1.1em" }} />
+              </Button>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
