@@ -59,10 +59,12 @@ const LINKEDIN_URL = "https://linkedin.com/in/ilyess-sellami";
 const INSTAGRAM_URL = "https://www.instagram.com/_ilyessellami";
 const TWITTER_URL = "https://twitter.com/ilyess_sellami1";
 const GITHUB_URL = "https://github.com/ilyess04";
+const GITHUB_USERNAME = "ilyess04";
 
 export {
   INIT_PARTICLE_PARAMS,
   INIT_TYPE_WRITER_OPTIONS,
+  GITHUB_USERNAME,
   CV_URL,
   GIT_PORTFOLIO_URL,
   LINKEDIN_URL,

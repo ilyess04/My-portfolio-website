@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface IKeys {
   [key: string]: string;
@@ -8,9 +8,33 @@ interface IPageProps {
 }
 interface ISocialIcon {
   url: string;
-  child: React.ReactNode;
+  child: ReactNode;
 }
 interface IHomeTemplates {
   icons: Array<ISocialIcon>;
 }
-export type { IKeys, IPageProps, ISocialIcon, IHomeTemplates };
+interface IAboutGithub {
+  githubUserName: string;
+}
+interface IStack {
+  elements: Array<ReactNode>;
+}
+interface IAboutCard {
+  otherActivities: Array<string>;
+}
+interface IAboutTemplate extends IAboutGithub {
+  skills: Array<ReactNode>;
+  tools: Array<ReactNode>;
+  otherActivities: Array<string>;
+}
+
+export type {
+  IKeys,
+  IPageProps,
+  ISocialIcon,
+  IHomeTemplates,
+  IAboutGithub,
+  IAboutTemplate,
+  IStack,
+  IAboutCard,
+};

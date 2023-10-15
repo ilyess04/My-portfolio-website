@@ -1,9 +1,14 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { AboutCard, AboutGithub, Particle, Techstack } from "../../components";
-import Toolstack from "../../components/organismes/toolStack/ToolStack";
+import { AboutCard, AboutGithub, Particle, Stack } from "../../components";
 import { aboutImg } from "../../assets";
+import { IAboutTemplate } from "../../common/interfaces";
 
-const AboutTemplate = (): JSX.Element => {
+const AboutTemplate = ({
+  githubUserName,
+  skills,
+  tools,
+  otherActivities,
+}: IAboutTemplate): JSX.Element => {
   return (
     <Container fluid className="about-section">
       <Particle />
@@ -20,7 +25,7 @@ const AboutTemplate = (): JSX.Element => {
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
               Know Who <strong className="purple">I'M</strong>
             </h1>
-            <AboutCard />
+            <AboutCard otherActivities={otherActivities} />
           </Col>
           <Col
             md={5}
@@ -34,13 +39,13 @@ const AboutTemplate = (): JSX.Element => {
           Professional <strong className="purple">Skillset</strong>
         </h1>
 
-        <Techstack />
+        <Stack elements={skills} />
 
         <h1 className="project-heading">
           <strong className="purple">Tools</strong> I use
         </h1>
-        <Toolstack />
-        <AboutGithub />
+        <Stack elements={tools} />
+        <AboutGithub githubUserName={githubUserName} />
       </Container>
     </Container>
   );

@@ -15,6 +15,26 @@ import {
 } from "../consts";
 import { FaLinkedinIn } from "react-icons/fa";
 import { ISocialIcon } from "../interfaces";
+import React from "react";
+import {
+  DiGit,
+  DiJava,
+  DiJavascript1,
+  DiMongodb,
+  DiNodejs,
+  DiReact,
+} from "react-icons/di";
+import {
+  SiFirebase,
+  SiMacos,
+  SiNestjs,
+  SiNextdotjs,
+  SiPostman,
+  SiSlack,
+  SiTypescript,
+  SiVercel,
+  SiVisualstudiocode,
+} from "react-icons/si";
 
 class Data {
   static getNavItems() {
@@ -59,6 +79,32 @@ class Data {
       { url: LINKEDIN_URL, child: <FaLinkedinIn /> },
       { url: INSTAGRAM_URL, child: <AiFillInstagram /> },
     ];
+  }
+  static getSkills(): Array<React.ReactNode> {
+    return [
+      <DiJavascript1 />,
+      <SiTypescript />,
+      <DiJava />,
+      <DiNodejs />,
+      <SiNestjs />,
+      <DiReact />,
+      <SiNextdotjs />,
+      <DiMongodb />,
+      <DiGit />,
+      <SiFirebase />,
+    ];
+  }
+  static getTools(): Array<React.ReactNode> {
+    return [
+      <SiMacos />,
+      <SiVisualstudiocode />,
+      <SiPostman />,
+      <SiSlack />,
+      <SiVercel />,
+    ];
+  }
+  static getOtherActivities(): Array<string> {
+    return ["Playing Games", "Writing Tech Blogs", "Travelling"];
   }
 }
 export { Data };

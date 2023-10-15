@@ -1,7 +1,8 @@
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import { IAboutCard } from "../../../common/interfaces";
 
-const AboutCard = (): JSX.Element => {
+const AboutCard = ({ otherActivities }: IAboutCard): JSX.Element => {
   return (
     <Card className="quote-card-view">
       <Card.Body>
@@ -19,19 +20,15 @@ const AboutCard = (): JSX.Element => {
             Apart from coding, some other activities that I love to do!
           </p>
           <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Travelling
-            </li>
+            {otherActivities.map((activity, index) => (
+              <li key={index} className="about-activity">
+                <ImPointRight /> {activity}
+              </li>
+            ))}
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+            "Strive to build things that make a difference!"
           </p>
           <footer className="blockquote-footer">Soumyajit</footer>
         </blockquote>
