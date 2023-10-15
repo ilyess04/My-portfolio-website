@@ -12,7 +12,7 @@ function NavBar() {
   const navItems = Data.getNavItems();
 
   return (
-    <Navbar expanded={expand} fixed="top" expand="md" className="navbar">
+    <Navbar expanded={expand} fixed="top" expand="md" className="mt-4">
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex">
           <img src={logo} className="img-fluid logo" alt="brand" />
