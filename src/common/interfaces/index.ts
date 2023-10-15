@@ -10,7 +10,10 @@ interface ISocialIcon {
   url: string;
   child: ReactNode;
 }
-interface IHomeTemplates {
+interface IHomeTemplates extends ITypewriter {
+  icons: Array<ISocialIcon>;
+}
+interface IAboutMe {
   icons: Array<ISocialIcon>;
 }
 interface IAboutGithub {
@@ -35,6 +38,9 @@ interface IProject {
 interface IProjectsTemplate {
   projects: Array<IProject>;
 }
+interface ITypewriter {
+  portfolioSkills: Array<string>;
+}
 export type {
   IKeys,
   IPageProps,
@@ -46,4 +52,6 @@ export type {
   IAboutCard,
   IProject,
   IProjectsTemplate,
+  ITypewriter,
+  IAboutMe,
 };

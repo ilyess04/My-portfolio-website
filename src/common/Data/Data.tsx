@@ -125,5 +125,14 @@ class Data {
       },
     ];
   }
+  static getPortfolioSkills(): Array<string> {
+    return [
+      "Full Stack Developer",
+      "MERN Stack Developer",
+      "Freelancer",
+      "Open Source Contributor",
+      "Cyber Security Student",
+    ];
+  }
 }
 export { Data };

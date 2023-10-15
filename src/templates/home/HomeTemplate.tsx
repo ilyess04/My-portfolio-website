@@ -3,7 +3,10 @@ import { homeLogo } from "../../assets";
 import { AboutMe, Particle, TypeWriter } from "../../components";
 import { IHomeTemplates } from "../../common/interfaces";
 
-const HomeTemplate = ({ icons }: IHomeTemplates): JSX.Element => {
+const HomeTemplate = ({
+  icons,
+  portfolioSkills,
+}: IHomeTemplates): JSX.Element => {
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -24,7 +27,7 @@ const HomeTemplate = ({ icons }: IHomeTemplates): JSX.Element => {
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
-                <TypeWriter />
+                <TypeWriter portfolioSkills={portfolioSkills} />
               </div>
             </Col>
 

@@ -42,12 +42,6 @@ const INIT_PARTICLE_PARAMS = {
   retina_detect: true,
 };
 const INIT_TYPE_WRITER_OPTIONS = {
-  strings: [
-    "Software Developer",
-    "Freelancer",
-    "MERN Stack Developer",
-    "Open Source Contributor",
-  ],
   autoStart: true,
   loop: true,
   deleteSpeed: 50,

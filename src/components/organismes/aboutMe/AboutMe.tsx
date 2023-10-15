@@ -1,9 +1,9 @@
 import Tilt from "react-parallax-tilt";
 import { Container, Row, Col } from "react-bootstrap";
 import { myImg } from "../../../assets";
-import { IHomeTemplates } from "../../../common/interfaces";
+import { IAboutMe } from "../../../common/interfaces";
 
-const AboutMe = ({ icons }: IHomeTemplates): JSX.Element => {
+const AboutMe = ({ icons }: IAboutMe): JSX.Element => {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
