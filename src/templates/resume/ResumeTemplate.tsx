@@ -26,12 +26,13 @@ const ResumeTemplate = (): JSX.Element => {
           <span>Download CV</span>
         </Button>
       </Row>
-
-      <Row className="resume">
-        <Document file={cv} className="d-flex justify-content-center">
-          <Page pageNumber={1} />
-        </Document>
-      </Row>
+      {width > 1000 && (
+        <Row className="resume">
+          <Document file={cv} className="d-flex justify-content-center">
+            <Page pageNumber={1} />
+          </Document>
+        </Row>
+      )}
     </Container>
   );
 };

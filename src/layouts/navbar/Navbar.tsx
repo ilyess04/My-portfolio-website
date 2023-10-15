@@ -37,13 +37,13 @@ function NavBar() {
                 </Nav.Link>
               </Nav.Item>
             ))}
-            <Nav.Item className="fork-btn">
+            <Nav.Item className="d-none d-md-block fork-btn">
               <Button
                 href={GIT_PORTFOLIO_URL}
                 target="_blank"
                 className="fork-btn-inner"
               >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
+                <CgGitFork style={{ fontSize: "1.2em" }} />
                 <AiFillStar style={{ fontSize: "1.1em" }} />
               </Button>
             </Nav.Item>
