@@ -46,7 +46,6 @@ const INIT_TYPE_WRITER_OPTIONS = {
   loop: true,
   deleteSpeed: 50,
 };
-const CV_URL = "https://ilyessellami.com/wp-content/assets/cv.pdf";
 
 const GIT_PORTFOLIO_URL = "https://github.com/ilyess04/my-portfolio-website";
 const LINKEDIN_URL = "https://linkedin.com/in/ilyess-sellami";
@@ -59,7 +58,6 @@ export {
   INIT_PARTICLE_PARAMS,
   INIT_TYPE_WRITER_OPTIONS,
   GITHUB_USERNAME,
-  CV_URL,
   GIT_PORTFOLIO_URL,
   LINKEDIN_URL,
   INSTAGRAM_URL,

@@ -3,7 +3,7 @@ import { Button, Container, Row } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page } from "react-pdf";
 import { Particle } from "../../components";
-import { CV_URL } from "../../common/consts";
+import { cv } from "../../assets";
 
 const ResumeTemplate = (): JSX.Element => {
   const [width, setWidth] = useState(1200);
@@ -18,18 +18,18 @@ const ResumeTemplate = (): JSX.Element => {
       <Row style={{ justifyContent: "center", position: "relative" }}>
         <Button
           variant="primary"
-          href={CV_URL}
+          href={cv}
           target="_blank"
           style={{ maxWidth: "250px" }}
         >
           <AiOutlineDownload />
-          &nbsp;Download CV
+          <span>Download CV</span>
         </Button>
       </Row>
 
       <Row className="resume">
-        <Document file={CV_URL} className="d-flex justify-content-center">
-          <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+        <Document file={cv} className="d-flex justify-content-center">
+          <Page pageNumber={1} />
         </Document>
       </Row>
     </Container>

@@ -111,17 +111,20 @@ class Data {
       {
         name: "React-Ts-Template",
         url: "https://github.com/ilyess04/React-Ts-Template",
-        description: "",
+        description:
+          "React.js template using TypeScript, redux-toolkit, tailwind-css and bootstrap for build any react-app",
       },
       {
         name: "Next-Ts-Template",
         url: "https://github.com/ilyess04/Next-Ts-Template",
-        description: "",
+        description:
+          "Next.js template using TypeScript, redux-toolkit, tailwind-css and bootstrap for build any next-app",
       },
       {
         name: "React-Native-Template",
         url: "https://github.com/ilyess04/React-Native-Template",
-        description: "",
+        description:
+          "React.Native template using TypeScript, redux-toolkit, react-navigation for build any react-native-mobile-app",
       },
     ];
   }
