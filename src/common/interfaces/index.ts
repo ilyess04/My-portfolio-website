@@ -27,7 +27,14 @@ interface IAboutTemplate extends IAboutGithub {
   tools: Array<ReactNode>;
   otherActivities: Array<string>;
 }
-
+interface IProject {
+  name: string;
+  url: string;
+  description: string;
+}
+interface IProjectsTemplate {
+  projects: Array<IProject>;
+}
 export type {
   IKeys,
   IPageProps,
@@ -37,4 +44,6 @@ export type {
   IAboutTemplate,
   IStack,
   IAboutCard,
+  IProject,
+  IProjectsTemplate,
 };

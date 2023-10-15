@@ -1,6 +1,8 @@
+import { Data } from "../../common/Data/Data";
 import { ProjectsTemplate } from "../../templates";
 
 const Projects = (): JSX.Element => {
-  return <ProjectsTemplate />;
+  const projects = Data.getProjects();
+  return <ProjectsTemplate projects={projects} />;
 };
 export default Projects;

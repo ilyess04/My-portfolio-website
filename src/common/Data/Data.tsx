@@ -14,7 +14,7 @@ import {
   TWITTER_URL,
 } from "../consts";
 import { FaLinkedinIn } from "react-icons/fa";
-import { ISocialIcon } from "../interfaces";
+import { IProject, ISocialIcon } from "../interfaces";
 import React from "react";
 import {
   DiGit,
@@ -105,6 +105,25 @@ class Data {
   }
   static getOtherActivities(): Array<string> {
     return ["Playing Games", "Writing Tech Blogs", "Travelling"];
+  }
+  static getProjects(): Array<IProject> {
+    return [
+      {
+        name: "React-Ts-Template",
+        url: "https://github.com/ilyess04/React-Ts-Template",
+        description: "",
+      },
+      {
+        name: "Next-Ts-Template",
+        url: "https://github.com/ilyess04/Next-Ts-Template",
+        description: "",
+      },
+      {
+        name: "React-Native-Template",
+        url: "https://github.com/ilyess04/React-Native-Template",
+        description: "",
+      },
+    ];
   }
 }
 export { Data };
