@@ -128,7 +128,7 @@ class Data {
           "React.Native template using TypeScript, redux-toolkit, react-navigation for build any react-native-mobile-app",
       },
       {
-        name: "My Portfolio Website",
+        name: "My-Portfolio-Website",
         url: "GIT_PORTFOLIO_URL",
         description:
           "A dynamic portfolio web application built with React.js and TypeScript. This project utilizes various libraries including React Bootstrap, React Router, Sass and others ... To create an interactive and visually appealing showcase of my work.",
