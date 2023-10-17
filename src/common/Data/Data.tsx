@@ -9,6 +9,7 @@ import {
 import { CgFileDocument } from "react-icons/cg";
 import {
   GITHUB_URL,
+  GIT_PORTFOLIO_URL,
   INSTAGRAM_URL,
   LINKEDIN_URL,
   TWITTER_URL,
@@ -125,6 +126,12 @@ class Data {
         url: "https://github.com/ilyess04/React-Native-Template",
         description:
           "React.Native template using TypeScript, redux-toolkit, react-navigation for build any react-native-mobile-app",
+      },
+      {
+        name: "My Portfolio Website",
+        url: "GIT_PORTFOLIO_URL",
+        description:
+          "A dynamic portfolio web application built with React.js and TypeScript. This project utilizes various libraries including React Bootstrap, React Router, Sass and others ... To create an interactive and visually appealing showcase of my work.",
       },
     ];
   }
