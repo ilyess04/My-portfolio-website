@@ -133,6 +133,12 @@ class Data {
         description:
           "A dynamic portfolio web application built with React.js and TypeScript. This project utilizes various libraries including React Bootstrap, React Router, Sass and others ... To create an interactive and visually appealing showcase of my work.",
       },
+      {
+        name: "Nest-Ts-Mongo-Template",
+        url: "https://github.com/ilyess04/Nest-Ts-Mongo-Template",
+        description:
+          "Nest.js template using TypeScript, MongoDB for building any web backend application",
+      },
     ];
   }
   static getPortfolioSkills(): Array<string> {
